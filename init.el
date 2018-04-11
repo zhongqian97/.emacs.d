@@ -1,8 +1,8 @@
+
 ;; Added by Package.el.  This must come before configurations of
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-
 
 (when (>= emacs-major-version 25)
   (require 'package)
@@ -18,6 +18,7 @@
 		      swiper
 		      counsel
 		      smartparens
+		      auto-org-md
 		      ) "Default packages")
 
 (setq package-selected-packages my/packages)
@@ -35,6 +36,25 @@
       (package-install pkg))))
 
 ;;包裹管理
+
+(require 'auto-org-md)
+(add-hook 'org-mode-hook 'auto-org-md-mode)
+
+(shell)
+
+(defun zhongqian-org-github-web ()
+  (progn
+    (shell-command "./sh/EmacsOrgGithub.sh")
+    ;;
+    (message "zhongqian-org-github-web is OK!")))
+
+(add-hook 'after-save-hook 'zhongqian-org-github-web)
+
+;;这个钩子全部保存函数都勾了。。。
+
+(setq auto-save-default nil)
+
+
 
 (require 'smartparens-config)
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
@@ -93,7 +113,6 @@
 
 ;;f2打开快捷键
 
-(require 'org)
 (setq org-src-fontify-natively t)
 
 ;;设置org文本语法高亮
@@ -139,3 +158,5 @@
  )
 
 (global-company-mode t)
+
+
