@@ -1,8 +1,3 @@
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-
 (package-initialize)
 (add-to-list 'load-path "~/.emacs.d/zhongqian/")
 
@@ -26,7 +21,7 @@
     ;;
     (message "zhongqian-org-github-web is OK!")))
 
-(add-hook 'after-save-hook 'zhongqian-org-github-web)
+;;(add-hook 'after-save-hook 'zhongqian-org-github-web)
 
 ;;这个钩子全部保存函数都勾了。。。
 
