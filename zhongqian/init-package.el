@@ -14,6 +14,7 @@
 		      smartparens
 		      auto-org-md
 		      popwin
+		      flycheck
 		      ) "Default packages")
 
 (setq package-selected-packages my/packages)

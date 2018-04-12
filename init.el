@@ -16,6 +16,7 @@
 (require 'init-company)
 (require 'init-system)
 (require 'init-org-mode)
+(require 'init-flycheck)
 
 (shell)
 
@@ -29,8 +30,6 @@
 
 ;;这个钩子全部保存函数都勾了。。。
 
-
-
  (defun open-my-init-file()
    (interactive)
    (find-file "~/.emacs.d/init.el"))
@@ -38,4 +37,3 @@
 (global-set-key (kbd "<f2>") 'open-my-init-file)
 
 ;;f2打开快捷键
-
