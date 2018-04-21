@@ -23,9 +23,13 @@
 
 (defun zhongqian-auto-git ()
   (progn
+
+    (magit-status)
+    (magit-commit)
+    
     (message "zhongqian-auto-git is OK!")))
 
-;;(add-hook 'after-save-hook 'zhongqian-auto-git)
+(add-hook 'after-save-hook 'zhongqian-auto-git)
 
 ;;(add-hook 'after-save-hook 'zhongqian-org-github-web)
 
