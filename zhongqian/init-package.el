@@ -15,6 +15,7 @@
 		      auto-org-md
 		      popwin
 		      flycheck
+		      magit
 		      ) "Default packages")
 
 (setq package-selected-packages my/packages)

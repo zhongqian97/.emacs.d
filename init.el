@@ -21,6 +21,12 @@
     ;;
     (message "zhongqian-org-github-web is OK!")))
 
+(defun zhongqian-auto-git ()
+  (progn
+    (message "zhongqian-auto-git is OK!")))
+
+;;(add-hook 'after-save-hook 'zhongqian-auto-git)
+
 ;;(add-hook 'after-save-hook 'zhongqian-org-github-web)
 
 ;;这个钩子全部保存函数都勾了。。。
